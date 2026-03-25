@@ -27,20 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
     gsap.registerPlugin(ScrollTrigger);
-    const lenis = new Lenis({
-        duration: 1.2,
-        smoothWheel: true,
-        touchMultiplier: 2,
-    });
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-    lenis.on('scroll', ScrollTrigger.update);
+    if (!isSafari) {
+        const lenis = new Lenis({
+            duration: 1.2,
+            smoothWheel: true,
+            touchMultiplier: 2,
+        });
 
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 1000);
-    });
+        lenis.on('scroll', ScrollTrigger.update);
 
-    gsap.ticker.lagSmoothing(0);
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000);
+        });
 
+        gsap.ticker.lagSmoothing(0);
+    }
     const sections = document.querySelectorAll('.reveal-section');
 
     sections.forEach(section => {

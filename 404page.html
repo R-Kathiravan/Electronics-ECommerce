@@ -18,11 +18,9 @@
 
 <body>
     <style>
-        /* --- 404 Error Page Layout --- */
         .error-section {
             position: relative;
             min-height: calc(100vh - 80px);
-            /* Adjust based on your header height */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -42,7 +40,6 @@
             position: relative;
         }
 
-        /* --- Left Side: Massive 404 --- */
         .error-visual {
             flex: 1;
             display: flex;
@@ -58,7 +55,6 @@
             font-family: var(--font-mono);
             font-weight: 900;
             letter-spacing: -5px;
-            /* Subtle floating animation */
             animation: floatCode 6s ease-in-out infinite;
             text-shadow: 0 10px 30px rgba(244, 63, 94, 0.3);
         }
@@ -77,7 +73,6 @@
             }
         }
 
-        /* The vertical line separating the 404 and the text */
         .error-divider {
             height: 150px;
             width: 2px;
@@ -85,7 +80,6 @@
             margin-left: 3rem;
         }
 
-        /* --- Right Side: Content & Actions --- */
         .error-content {
             flex: 1.5;
             display: flex;
@@ -114,7 +108,6 @@
             gap: 1rem;
         }
 
-        /* --- Mobile Adjustments --- */
         @media (max-width: 900px) {
             .error-container {
                 flex-direction: column;
@@ -129,7 +122,6 @@
 
             .error-divider {
                 display: none;
-                /* Hide the vertical line on mobile */
             }
 
             .error-code {
@@ -156,8 +148,8 @@
                 <div class="chips"
                     style="border-color: #ef4444; color: #ef4444; margin-bottom: 1rem; display: inline-block;">Error
                     Detected</div>
-                <h2 class="error-title">System <span class="text-gradient">Offline</span></h2>
-                <p class="error-subtitle">The coordinates you entered lead to a dead zone. The page you are looking for
+                <h2 class="error-title">Page <span class="text-gradient">Not Found</span></h2>
+                <p class="error-subtitle"> The page you are looking for
                     has been moved, renamed, or no longer exists in our ecosystem.</p>
 
                 <div class="error-actions">
@@ -169,7 +161,7 @@
                         <span class="material-icons" style="font-size: 1.2rem; margin-right: 0.5rem;">undo</span>
                         Return to Previous Page
                     </button>
-                </div> 
+                </div>
             </div>
         </div>
     </section>

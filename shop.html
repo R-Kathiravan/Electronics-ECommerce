@@ -74,7 +74,7 @@
             <div class="filter-chips" id="filterChips">
             </div>
 
-            <div class="shop-container">
+            <div class="shop-container reveal-section">
                 <aside class="filter-sidebar glass-panel" id="filterSidebar">
                     <h3 class="sidebar-title">Filters <button class="clear-all-btn btn-chip" id="clearAllBtn">Clear
                             All</button></h3>
@@ -124,20 +124,19 @@
                     </div>
                 </aside>
                 <main class="shop-main">
-                    <div class="product-grid" id="productGrid">
-                        
-                        </div>
+                    <div class="product-grid reveal-section" id="productGrid">
+
                     </div>
-                    <div class="no-results" id="noResults">
-                        <img src="./assets/space.webp" alt="No results" class="no-results-img">
-                        <h3>No Products Found</h3>
-                        <p>Try adjusting your filters or clear all to see more results.</p>
-                        <button class="btn btn-cart" id="clearFiltersBtn">Clear Filters</button>
-                    </div>
-                    <nav class="pagination" id="pagination">
-                    </nav>
                 </main>
             </div>
+            <div class="no-results" id="noResults">
+                <img src="./assets/space.webp" alt="No results" class="no-results-img">
+                <h3>No Products Found</h3>
+                <p>Try adjusting your filters or clear all to see more results.</p>
+                <button class="btn btn-cart" id="clearFiltersBtn">Clear Filters</button>
+            </div>
+            <nav class="pagination" id="pagination">
+            </nav>
         </div>
 
         <button class="mobile-filter-btn" id="mobileFilterBtn">
@@ -174,7 +173,8 @@
                     <div class="glow-circle"
                         style="width: 300px; height: 300px; background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);">
                     </div>
-                    <img src="./assets/old-device.webp" alt="Trade in your old devices" class="floating-device reveal-image1">
+                    <img src="./assets/old-device.webp" alt="Trade in your old devices"
+                        class="floating-device reveal-image1">
                 </div>
 
             </div>
@@ -564,10 +564,10 @@
 
             function renderProducts(products) {
                 elements.productGrid.innerHTML = products.map(product => `
-                <div class="tech-card card reveal-section" data-product-id="${product.id}" data-aos='fade-up' data-aos-delay='200'>
+                <div class="tech-card card" data-product-id="${product.id}" data-aos='fade-up' data-aos-delay='200'>
                     <div class="tech-badge">${Math.random() > 0.7 ? 'New' : 'Best'}</div>
                     <div class="tech-img-wrapper">
-                        <img src="${product.img1}" alt="${product.title}" class="floating-device img1 reveal-image1" loading="lazy">
+                        <img src="${product.img1}" alt="${product.title}" class="floating-device img1" loading="lazy">
                         <img src="${product.img2}" alt="${product.title}" class="img2 floating-device" loading="lazy">
                     </div>
                     <div class="tech-info">
@@ -677,13 +677,10 @@
                 applyFilters();
             });
 
-            // Chip remove
             elements.filterChips.addEventListener('click', (e) => {
                 if (e.target.classList.contains('remove-chip')) {
                     const chipText = e.target.dataset.chip;
-                    // Logic to remove specific filter based on chip text
                     console.log('Remove chip:', chipText);
-                    // Implement remove logic
                     applyFilters();
                 }
             });
@@ -729,7 +726,6 @@
                 applyFilters();
             }
 
-            // Pagination
             window.shopApp = {
                 changePage: (page) => {
                     filterState.page = page;
@@ -737,7 +733,6 @@
                 }
             };
 
-            // Initial render
             applyFilters();
         }
 

@@ -51,7 +51,6 @@
 }
 
 
-/* --- Contact Page Layout --- */
 .contact-section {
     margin: 5rem auto;
 }
@@ -59,12 +58,10 @@
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    /* Form gets slightly more space */
     gap: 4rem;
     align-items: start;
 }
 
-/* --- Left Side: Info Text & Cards --- */
 .contact-subtitle {
     color: var(--text-muted);
     font-size: 1.1rem;
@@ -89,7 +86,6 @@
 
 .info-card:hover {
     transform: translateX(10px);
-    /* Slides slightly to the right on hover */
     border-color: rgba(244, 63, 94, 0.3);
 }
 
@@ -153,7 +149,6 @@
     font-weight: 500;
 }
 
-/* Input & Textarea Styling */
 .form-group input,
 .form-group textarea,
 .form-group select {
@@ -174,7 +169,6 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
-/* Focus Glow Effect */
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
@@ -208,11 +202,9 @@
 .form-group textarea.error,
 .form-group select.error {
     border-color: #ef4444;
-    /* Bright Red */
     box-shadow: 0 0 10px rgba(239, 68, 68, 0.15);
 }
 
-/* Dynamic Error Message Text */
 .error-message {
     color: #ef4444;
     font-size: 0.8rem;
@@ -239,17 +231,14 @@
     }
 }
 
-/* Success State for the Button */
 .btn.success-state {
     background: var(--success-neon);
     border-color: var(--success-neon);
     color: #000;
     pointer-events: none;
-    /* Prevents double-clicking */
     box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
 }
 
-/* --- 1. Help Desk Grid --- */
 .help-desk-section {
     margin: 6rem auto;
 }
@@ -352,7 +341,6 @@
 
 .accordion-item.active .accordion-header .icon {
     transform: rotate(45deg);
-    /* Turns the '+' into an 'x' */
 }
 
 .accordion-content {
@@ -415,7 +403,6 @@
     color: var(--text-muted);
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 900px) {
     .help-desk-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -456,7 +443,6 @@
     }
 }
 
-/* --- Global Operations Visual --- */
 .location-visual {
     width: 100%;
     min-height: 450px;
@@ -478,7 +464,6 @@
     justify-content: center;
 }
 
-/* Radar Rings Background */
 .radar-bg {
     position: absolute;
     top: 50%;
@@ -518,7 +503,6 @@
     animation: spin 40s linear infinite reverse;
 }
 
-/* Central HQ Hub */
 .hub-center {
     position: relative;
     z-index: 5;
@@ -569,7 +553,6 @@
     letter-spacing: 1px;
 }
 
-/* Floating Stat Nodes */
 .floating-node {
     position: absolute;
     display: flex;
@@ -579,7 +562,6 @@
     border-radius: var(--radius-md);
     z-index: 10;
     background: rgba(15, 17, 23, 0.7);
-    /* Slightly darker glass */
     transition: transform var(--transition-base);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
@@ -588,7 +570,6 @@
     transform: translateY(-5px);
 }
 
-/* Exact Positioning for the Nodes */
 .node-1 {
     top: 10%;
     left: 5%;
@@ -601,7 +582,6 @@
     animation: floatY 5s ease-in-out infinite 1s;
 }
 
-/* Delayed so they don't move together */
 .node-3 {
     top: 15%;
     right: 10%;
@@ -622,7 +602,6 @@
     }
 }
 
-/* Mobile Adjustments */
 @media (max-width: 768px) {
     .floating-node {
         padding: 0.8rem;
@@ -648,6 +627,5 @@
 
     .node-3 {
         display: none;
-        /* Hide one node on very small screens to avoid clutter */
     }
 }

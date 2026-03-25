@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // Header/mobile menu (existing)
     const header = document.getElementById('header');
     const hamburger = document.getElementById("hamburger");
     const navMenu = document.getElementById("navMenu");

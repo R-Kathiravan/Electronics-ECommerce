@@ -533,7 +533,7 @@
                         clearInterval(interval);
                         currentIndex = index;
                         updateTestimonial(currentIndex);
-                        interval = setInterval(nextTestimonial, 10000); // Wait longer after user interaction
+                        interval = setInterval(nextTestimonial, 10000);
                     });
                 });
                 const accordionItems = document.querySelectorAll('.accordion-item');
@@ -542,7 +542,6 @@
                     const header = item.querySelector('.accordion-header');
 
                     header.addEventListener('click', () => {
-                        // Close all other open items for a cleaner look
                         accordionItems.forEach(otherItem => {
                             if (otherItem !== item && otherItem.classList.contains('active')) {
                                 otherItem.classList.remove('active');
@@ -550,7 +549,6 @@
                             }
                         });
 
-                        // Toggle the clicked item
                         item.classList.toggle('active');
                         const content = item.querySelector('.accordion-content');
 

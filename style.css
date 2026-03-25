@@ -349,7 +349,6 @@
     transform: translateY(-8px) scale(1.05);
 }
 
-/* Typography Adjustments */
 .tech-brand {
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -370,7 +369,6 @@
     font-weight: bold;
 }
 
-/* Spec List Styling */
 .tech-specs {
     list-style: none;
     padding: 1rem 0;
@@ -394,24 +392,19 @@
     font-size: 1rem;
     color: var(--text-muted);
     background: none;
-    /* Override previous gradient for cleaner look */
     -webkit-text-fill-color: currentcolor;
 }
 
-/* Actions Row */
 .tech-actions {
     display: flex;
     gap: 0.5rem;
     margin-top: auto;
-    /* Pushes buttons to the bottom */
 }
 
 .full-width {
     flex: 1;
-    /* Makes the Add to Cart button take up remaining space */
 }
 
-/* Small Badge */
 .tech-badge {
     position: absolute;
     top: 1rem;
@@ -428,7 +421,6 @@
     font-weight: bold;
 }
 
-/* Section Container */
 .trending-section {
     margin: 4rem auto;
     display: flex;

@@ -4,7 +4,6 @@
 
  .auth-section {
      min-height: calc(100vh - 80px);
-     /* Assumes an 80px header */
      display: flex;
      align-items: center;
      justify-content: center;
@@ -17,7 +16,6 @@
      max-width: 1000px;
      min-height: 600px;
      padding: 0;
-     /* Override glass-panel padding */
      overflow: hidden;
      position: relative;
  }
@@ -55,7 +53,6 @@
      line-height: 1.6;
  }
 
- /* Decorative Glow */
  .glow-orb {
      position: absolute;
      bottom: -100px;
@@ -136,7 +133,6 @@
      }
  }
 
- /* Password Input with Toggle */
  .password-wrapper {
      position: relative;
      display: flex;
@@ -146,7 +142,6 @@
  .password-wrapper input {
      width: 100%;
      padding-right: 2.5rem;
-     /* Make room for the eye icon */
  }
 
  .toggle-password {
@@ -221,7 +216,6 @@
      font-weight: 500;
  }
 
- /* Input & Textarea Styling */
  .form-group input,
  .form-group textarea,
  .form-group select {
@@ -275,11 +269,9 @@
  .form-group textarea.error,
  .form-group select.error {
      border-color: #ef4444;
-     /* Bright Red */
      box-shadow: 0 0 10px rgba(239, 68, 68, 0.15);
  }
 
- /* Dynamic Error Message Text */
  .error-message {
      color: #ef4444;
      font-size: 0.8rem;
@@ -306,23 +298,19 @@
      }
  }
 
- /* Success State for the Button */
  .btn.success-state {
      background: var(--success-neon);
      border-color: var(--success-neon);
      color: #000;
      pointer-events: none;
-     /* Prevents double-clicking */
      box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
  }
 
- /* --- Social Login Footer --- */
  .form-footer {
      margin-top: 2rem;
      text-align: center;
  }
 
- /* Creates the "---- Or continue with ----" line effect */
  .form-divider {
      display: flex;
      align-items: center;

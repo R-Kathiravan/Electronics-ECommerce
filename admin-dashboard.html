@@ -40,7 +40,8 @@
             </nav>
 
             <div class="sidebar-footer">
-                <a href="index.html" class="btn-sweep" style="display: flex; align-items: center; gap: 15px;"> <span class="material-icons" style="rotate: 180deg;">arrow_forward</span> Back to Home</a>
+                <a href="index.html" class="btn-sweep" style="display: flex; align-items: center; gap: 15px;"> <span
+                        class="material-icons" style="rotate: 180deg;">arrow_forward</span> Back to Home</a>
                 <a href="login.html" class="nav-item text-danger" id="adminLogoutBtn"><span
                         class="material-icons">logout</span> Logout</a>
             </div>
@@ -53,7 +54,7 @@
                     <button class="mobile-menu-toggle" id="mobileMenuToggle">
                         <span class="material-icons">menu</span>
                     </button>
-                    <h1 style="color: var(--text-main); margin: 0 0 0.5rem 0;">Admin  <span
+                    <h1 style="color: var(--text-main); margin: 0 0 0.5rem 0;">Admin <span
                             class="text-gradient">Dashboard</span></h1>
                     <p class="user-email-display" style="margin-bottom: 0.5rem;"><span
                             class="material-icons">shield</span> <span id="adminEmailTarget">Loading...</span></p>
@@ -604,14 +605,13 @@
             const navItems = document.querySelectorAll('.sidebar-nav .nav-item');
             const tabs = document.querySelectorAll('.dashboard-tab');
 
-            // Map the clicked sidebar item to the correct Admin tab ID
             const targetTabIds = [
-                'admin-overview-tab',    // 1. Command Center
-                'admin-orders-tab',      // 2. Order Fulfillment
-                'admin-inventory-tab',   // 3. Inventory & Stock
-                null,                    // 4. Customers (Placeholder)
-                null,                    // 5. Marketing (Placeholder)
-                null                     // 6. Config (Placeholder)
+                'admin-overview-tab',
+                'admin-orders-tab',
+                'admin-inventory-tab',
+                null,
+                null,
+                null
             ];
 
             navItems.forEach((item, index) => {
@@ -632,43 +632,33 @@
                 });
             });
 
-            // Logout Logic
             document.getElementById('adminLogoutBtn').addEventListener('click', (e) => {
                 e.preventDefault();
                 sessionStorage.removeItem('userEmail');
                 window.location.href = 'login.html';
             });
-            // --- 1. Get the canvas context ---
             const ctx = document.getElementById('revenueChart').getContext('2d');
 
-            // --- 2. Create the glowing gradient fill ---
-            // The gradient goes from your neon accent color to transparent
             let gradient = ctx.createLinearGradient(0, 0, 0, 400);
-            gradient.addColorStop(0, 'rgba(244, 63, 94, 0.5)'); // Matches your var(--accent-primary)
+            gradient.addColorStop(0, 'rgba(244, 63, 94, 0.5)');
             gradient.addColorStop(1, 'rgba(244, 63, 94, 0.0)');
 
-            // --- 3. Initialize the Chart ---
             new Chart(ctx, {
                 type: 'line',
                 data: {
-                    // X-Axis Labels (Last 7 Days)
                     labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
                     datasets: [{
                         label: 'Daily Revenue ($)',
-                        // Fake data points for the chart
                         data: [4200, 5100, 4800, 6300, 5900, 8100, 8459],
 
-                        // Line Styling
-                        borderColor: '#f43f5e', // Neon Rose border
+                        borderColor: '#f43f5e',
                         borderWidth: 3,
-                        tension: 0.4, // This makes the line a smooth curve instead of jagged points
+                        tension: 0.4,
 
-                        // Fill Styling
                         backgroundColor: gradient,
                         fill: true,
 
-                        // Data Point Dots
-                        pointBackgroundColor: '#1f2937', // Dark background for the dot
+                        pointBackgroundColor: '#1f2937',
                         pointBorderColor: '#f43f5e',
                         pointBorderWidth: 2,
                         pointRadius: 4,
@@ -677,22 +667,22 @@
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false, // Ensures it fits exactly inside your 300px container
+                    maintainAspectRatio: false,
                     plugins: {
                         legend: {
-                            display: false // Hides the default legend to keep it clean
+                            display: false
                         },
                         tooltip: {
-                            backgroundColor: 'rgba(15, 17, 23, 0.9)', // Dark glass tooltip
+                            backgroundColor: 'rgba(15, 17, 23, 0.9)',
                             titleColor: '#fff',
                             bodyColor: '#9ca3af',
                             borderColor: 'rgba(255, 255, 255, 0.1)',
                             borderWidth: 1,
                             padding: 10,
-                            displayColors: false, // Hides the little color box in the tooltip
+                            displayColors: false,
                             callbacks: {
                                 label: function (context) {
-                                    return '$' + context.parsed.y.toLocaleString(); // Formats as currency
+                                    return '$' + context.parsed.y.toLocaleString();
                                 }
                             }
                         }
@@ -701,19 +691,19 @@
                         y: {
                             beginAtZero: true,
                             grid: {
-                                color: 'rgba(255, 255, 255, 0.05)', // Very faint horizontal grid lines
+                                color: 'rgba(255, 255, 255, 0.05)',
                                 drawBorder: false
                             },
                             ticks: {
                                 color: '#9ca3af',
                                 callback: function (value) {
-                                    return '$' + value / 1000 + 'k'; // Formats Y-axis as $4k, $6k, etc.
+                                    return '$' + value / 1000 + 'k';
                                 }
                             }
                         },
                         x: {
                             grid: {
-                                display: false, // Removes vertical grid lines for a cleaner look
+                                display: false,
                                 drawBorder: false
                             },
                             ticks: {

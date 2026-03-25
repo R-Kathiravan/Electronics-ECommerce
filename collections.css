@@ -85,7 +85,6 @@
     padding: 1.25rem 3rem;
 }
 
-/* Shop the Look */
 .shop-look-section {
     margin: 6rem 0;
     text-align: center;
@@ -188,7 +187,6 @@
     padding: 0.5rem 1rem;
 }
 
-/* Zig-Zag Roster */
 .zigzag-roster {
     display: flex;
     flex-direction: column;
@@ -599,7 +597,8 @@ html {
         justify-content: center;
         text-align: left;
     }
-    .related-grid{
+
+    .related-grid {
         grid-template-columns: 1fr;
     }
 }

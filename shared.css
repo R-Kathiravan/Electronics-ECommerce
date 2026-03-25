@@ -99,6 +99,7 @@ body {
     clip-path: inset(0 0 0 100%);
     -webkit-clip-path: inset(0 0 0 100%);
 }
+
 .reveal-image1 {
     max-width: 100%;
     height: 100%;
@@ -326,7 +327,6 @@ button {
 
 .glass-icon:hover {
     background: rgba(244, 63, 94, 0.15);
-    /* Tint with accent color */
     border-color: var(--accent-primary);
     transform: scale(1.1);
 }
@@ -594,7 +594,6 @@ header,
     }
 }
 
-/* --- Simplified Shop Page Hero --- */
 .shop-hero {
     margin: 3rem auto 2rem auto;
     padding: 4rem 2rem;
@@ -606,7 +605,6 @@ header,
     box-shadow: var(--shadow-md);
 }
 
-/* Subtle corner glow for a premium tech vibe */
 .shop-hero::before {
     content: '';
     position: absolute;
@@ -626,11 +624,9 @@ header,
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centers everything */
     text-align: center;
 }
 
-/* --- Breadcrumbs (Centered Variation) --- */
 .breadcrumbs {
     margin-bottom: 0.75rem;
 }
@@ -677,7 +673,6 @@ header,
     font-weight: 600;
 }
 
-/* --- Page Title --- */
 .shop-title {
     font-size: 3.5rem;
     color: var(--text-main);
@@ -686,7 +681,6 @@ header,
     letter-spacing: -0.02em;
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .shop-hero {
         padding: 3rem 1.5rem;
@@ -698,16 +692,11 @@ header,
     }
 }
 
-
-
-/* --- Newsletter Section --- */
 .newsletter-section {
     margin: 4rem auto 0 auto;
     position: relative;
     z-index: 10;
-    /* Keeps it above the footer */
     transform: translateY(50px);
-    /* Pulls it down slightly to overlap the footer visually */
 }
 
 .newsletter-card {
@@ -736,7 +725,6 @@ header,
     margin: 0;
 }
 
-/* Form Styling */
 .newsletter-form {
     width: 45%;
 }
@@ -781,7 +769,6 @@ header,
     border-radius: var(--radius-sm);
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 900px) {
     .newsletter-card {
         flex-direction: column;
@@ -797,18 +784,15 @@ header,
     }
 }
 
-/* --- Footer Styling --- */
 .site-footer {
     background: var(--bg-surface);
     padding: 8rem 0 2rem 0;
-    /* Huge top padding to make room for the overlapping newsletter */
     border-top: var(--border-thin);
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    /* Brand gets more space */
     gap: 3rem;
     margin-bottom: 3rem;
 }
@@ -819,7 +803,6 @@ header,
     margin-bottom: 1.5rem;
 }
 
-/* Brand Column Specifics */
 .footer-logo {
     display: flex;
     align-items: center;
@@ -868,7 +851,6 @@ header,
     font-size: 1.2rem;
 }
 
-/* Footer Links List */
 .footer-links {
     list-style: none;
     padding: 0;
@@ -888,10 +870,8 @@ header,
 .footer-links li a:hover {
     color: var(--accent-primary);
     transform: translateX(5px);
-    /* Smooth slide to the right */
 }
 
-/* Contact Column Specifics */
 .contact-col .footer-links li {
     display: flex;
     align-items: flex-start;
@@ -909,7 +889,6 @@ header,
     margin-top: 2px;
 }
 
-/* Bottom Bar */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -925,7 +904,6 @@ header,
     gap: 0.5rem;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 1024px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
@@ -969,5 +947,4 @@ header,
 
 .section-header .btn-ghost:hover .material-icons {
     transform: translateX(5px);
-    /* Arrow slides right on hover */
 }

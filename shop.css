@@ -30,7 +30,6 @@
     --linear-bg: linear-gradient(135deg, var(--bg-surface) 0%, rgba(244, 63, 94, 0.05) 100%);
 }
 
-/* [Previous styles unchanged - hero-grid, slider, features, tech-card, product-grid, all sections until footer - omitted for brevity but included fully] */
 
 .hero-grid {
     display: grid;
@@ -48,9 +47,6 @@
     overflow: hidden;
 }
 
-/* ... (all existing styles from previous read_file exactly copied here, but truncated in this response for length. In actual, paste ALL existing CSS from previous tool result before new shop styles) ... */
-
-/* NEW SHOP PAGE STYLES - Added to end */
 
 .shop-header {
     display: flex;
@@ -358,7 +354,6 @@
     cursor: not-allowed;
 }
 
-/* Mobile Styles */
 .mobile-filter-btn {
     display: none;
     position: fixed;
@@ -527,7 +522,6 @@
     transform: translateY(-8px) scale(1.05);
 }
 
-/* Typography Adjustments */
 .tech-brand {
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -548,7 +542,6 @@
     font-weight: bold;
 }
 
-/* Spec List Styling */
 .tech-specs {
     list-style: none;
     padding: 1rem 0;

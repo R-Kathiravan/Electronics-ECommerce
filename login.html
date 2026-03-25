@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login || Ecommerce</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="shared.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="auth-section">
+        <a href="index.html" class="btn-chip back-btn">Back to Home</a>
+        <div class="auth-container glass-panel">
+            <div class="auth-banner">
+                <div class="banner-content">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 2rem; margin-left: 0px;">
+                        <img src="./assets/Stackly-Logo-White.webp" alt="logo" class="logo">
+                    </a>
+                    <h2>Your Digital <br><span class="text-gradient">Ecosystem</span></h2>
+                    <p>Log in to track orders, save your favorite setups, and access exclusive tech drops.</p>
+                </div>
+                <div class="glow-orb"></div>
+            </div>
+
+            <div class="auth-forms-wrapper">
+
+                <div class="auth-toggles">
+                    <button class="toggle-btn active" id="showLogin">Sign In</button>
+                    <button class="toggle-btn" id="showSignup">Sign Up</button>
+                </div>
+
+                <form id="loginForm" class="auth-form active-form" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="loginRole">Account Type</label>
+                        <div class="sort-dropdown">
+                            <select id="loginRole" class="custom-select" style="width: 100%; padding-left: 1.5rem;"
+                                required>
+                                <option value="client" selected>Client</option>
+                                <option value="admin">Administrator</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <div style="display: flex; justify-content: space-between;">
+                            <label for="loginPassword">Password</label>
+                            <a href="#" class="forgot-link" id="showForgot">Forgot Password?</a>
+                        </div>
+                        <div class="password-wrapper">
+                            <input type="password" id="loginPassword" placeholder="••••••••" required>
+                            <span class="material-icons toggle-password">visibility_off</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-cart"
+                        style="width: 100%; justify-content: center; margin-top: 1rem;">Log In</button>
+                </form>
+
+                <form id="signupForm" class="auth-form" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label for="signupRole">Account Type</label>
+                        <div class="sort-dropdown">
+                            <select id="signupRole" class="custom-select" style="width: 100%; padding-left: 1.5rem;"
+                                required>
+                                <option value="client" selected>Client</option>
+                                <option value="admin">Administrator</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" placeholder="Alex Chen" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Create Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signupPassword" placeholder="Minimum 8 characters" required>
+                            <span class="material-icons toggle-password">visibility_off</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-cart"
+                        style="width: 100%; justify-content: center; margin-top: 1rem;">Create Account</button>
+                </form>
+
+                <form id="forgotForm" class="auth-form" onsubmit="event.preventDefault();">
+                    <div style="margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--text-main); margin: 0 0 0.5rem 0;">Reset Password</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">Enter your email and we'll
+                            send you a recovery link.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="resetEmail">Email Address</label>
+                        <input type="email" id="resetEmail" placeholder="name@example.com" required>
+                    </div>
+                    <button type="submit" class="btn btn-cart"
+                        style="width: 100%; justify-content: center; margin-top: 1rem;">Send Reset Link</button>
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <a href="#" class="forgot-link" id="backToLogin"><span class="material-icons"
+                                style="font-size: 1rem; vertical-align: middle;">arrow_back</span> Back to Sign In</a>
+                    </div>
+                </form>
+                <div class="form-footer">
+                    <div class="form-divider">
+                        <span>Or continue with</span>
+                    </div>
+
+                    <div class="form-social">
+                        <a href="404page.html" class="social-btn" aria-label="Sign in with Google">
+                            <i class="fa-brands fa-google"></i>
+                        </a>
+                        <a href="404page.html" class="social-btn" aria-label="Sign in with Apple">
+                            <i class="fa-brands fa-apple"></i>
+                        </a>
+                        <a href="404page.html" class="social-btn" aria-label="Sign in with GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const showLoginBtn = document.getElementById('showLogin');
+            const showSignupBtn = document.getElementById('showSignup');
+            const showForgotBtn = document.getElementById('showForgot');
+            const backToLoginBtn = document.getElementById('backToLogin');
+
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const forgotForm = document.getElementById('forgotForm');
+            const authToggles = document.querySelector('.auth-toggles');
+
+            function switchForm(formToShow) {
+                loginForm.classList.remove('active-form');
+                signupForm.classList.remove('active-form');
+                forgotForm.classList.remove('active-form');
+
+                formToShow.classList.add('active-form');
+
+                if (formToShow === forgotForm) {
+                    authToggles.style.display = 'none';
+                } else {
+                    authToggles.style.display = 'flex';
+                }
+            }
+
+            showLoginBtn.addEventListener('click', () => {
+                showLoginBtn.classList.add('active');
+                showSignupBtn.classList.remove('active');
+                switchForm(loginForm);
+            });
+
+            showSignupBtn.addEventListener('click', () => {
+                showSignupBtn.classList.add('active');
+                showLoginBtn.classList.remove('active');
+                switchForm(signupForm);
+            });
+
+            showForgotBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                switchForm(forgotForm);
+            });
+
+            backToLoginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showLoginBtn.click();
+            });
+
+            const togglePasswords = document.querySelectorAll('.toggle-password');
+
+            togglePasswords.forEach(icon => {
+                icon.addEventListener('click', function () {
+                    const input = this.previousElementSibling;
+                    if (input.type === 'password') {
+                        input.type = 'text';
+                        this.textContent = 'visibility';
+                    } else {
+                        input.type = 'password';
+                        this.textContent = 'visibility_off';
+                    }
+                });
+            });
+
+            function showError(input, messageText) {
+                const formGroup = input.parentElement.classList.contains('password-wrapper') ? input.parentElement.parentElement : input.parentElement;
+                input.classList.add('error');
+                let errorElement = formGroup.querySelector('.error-message');
+                if (!errorElement) {
+                    errorElement = document.createElement('div');
+                    errorElement.className = 'error-message';
+                    formGroup.appendChild(errorElement);
+                }
+                errorElement.innerHTML = `<span class="material-icons">error_outline</span> ${messageText}`;
+            }
+
+            function clearError(input) {
+                const formGroup = input.parentElement.classList.contains('password-wrapper') ? input.parentElement.parentElement : input.parentElement;
+                input.classList.remove('error');
+                const errorElement = formGroup.querySelector('.error-message');
+                if (errorElement) formGroup.removeChild(errorElement);
+            }
+
+            function isValidEmail(emailStr) {
+                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(emailStr).toLowerCase());
+            }
+            function handleAuthSubmit(form, buttonTxt, successTxt, validationCallback, successAction = null) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    if (validationCallback()) {
+                        const submitBtn = form.querySelector('button[type="submit"]');
+
+                        submitBtn.innerHTML = '<span class="material-icons" style="animation: spin 1s linear infinite;">autorenew</span> Processing...';
+                        submitBtn.style.opacity = '0.8';
+
+                        setTimeout(() => { 
+
+                            setTimeout(() => {
+                                if (typeof successAction === 'string') {
+                                    window.location.href = successAction;
+                                } else if (typeof successAction === 'function') {
+                                    submitBtn.classList.remove('success-state');
+                                    submitBtn.innerHTML = buttonTxt;
+                                    form.reset();
+                                    successAction();
+                                } else {
+                                    submitBtn.classList.remove('success-state');
+                                    submitBtn.innerHTML = buttonTxt;
+                                    form.reset();
+                                }
+                            }, 1000);
+
+                        }, 1500);
+                    }
+                });
+            }
+
+            handleAuthSubmit(loginForm, 'Log In', 'Welcome Back!', () => {
+                let valid = true;
+                const email = document.getElementById('loginEmail');
+                const pass = document.getElementById('loginPassword');
+                const usermail = email.value;
+                if (!isValidEmail(email.value)) { showError(email, 'Valid email required'); valid = false; } else clearError(email);
+                if (pass.value.trim() === '') { showError(pass, 'Password required'); valid = false; } else clearError(pass);
+                if (usermail) {
+                    sessionStorage.setItem("userMail", usermail);
+                }
+                return valid;
+            }, () => {
+                const role = document.getElementById('loginRole').value;
+                if (role === 'admin') {
+                    window.location.href = 'admin-dashboard.html';
+                } else {
+                    window.location.href = 'client-dashboard.html';
+                }
+            });
+            handleAuthSubmit(signupForm, 'Create Account', 'Account Created!', () => {
+                let valid = true;
+                const name = document.getElementById('signupName');
+                const email = document.getElementById('signupEmail');
+                const pass = document.getElementById('signupPassword');
+
+                if (name.value.trim() === '') { showError(name, 'Name required'); valid = false; } else clearError(name);
+                if (!isValidEmail(email.value)) { showError(email, 'Valid email required'); valid = false; } else clearError(email);
+                if (pass.value.length < 8) { showError(pass, 'Password must be at least 8 characters'); valid = false; } else clearError(pass);
+
+                return valid;
+            }, () => {
+                const showLoginBtn = document.getElementById('showLogin');
+                showLoginBtn.click();
+                document.getElementById('loginEmail').value = document.getElementById('signupEmail').value;
+                document.getElementById('loginRole').value = document.getElementById('signupRole').value;
+            });
+
+            handleAuthSubmit(forgotForm, 'Send Reset Link', 'Link Sent!', () => {
+                let valid = true;
+                const email = document.getElementById('resetEmail');
+                if (!isValidEmail(email.value)) { showError(email, 'Valid email required'); valid = false; } else window.location.href='404page.html';
+                return valid;
+            });
+
+            document.querySelectorAll('.auth-form input').forEach(input => {
+                input.addEventListener('input', () => clearError(input));
+            });
+        });
+    </script>
+</body>
+
+</html>

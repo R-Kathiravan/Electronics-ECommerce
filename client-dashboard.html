@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard - Stackly Ecommerce</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="client-dashboard.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <aside class="dashboard-sidebar glass-panel">
+            <a href="index.html" class="sidebar-brand">
+                <img src="./assets/Stackly-Logo-White.webp" alt="logo" class="logo">
+            </a>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active"><span class="material-icons">grid_view</span> Overview</a>
+                <a href="#" class="nav-item"><span class="material-icons">inventory_2</span> Order History</a>
+                <a href="#" class="nav-item"><span class="material-icons">favorite_border</span> Saved Ecosystems</a>
+                <a href="#" class="nav-item"><span class="material-icons">credit_card</span> Payment & Address</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="nav-item btn-chip" style="width: fit-content; margin-bottom: 20px;"> Back to
+                    home</a>
+                <a href="login.html" class="nav-item text-danger" id="logoutBtn"><span
+                        class="material-icons">logout</span> Sign Out</a>
+            </div>
+        </aside>
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span class="material-icons">menu</span>
+                    </button>
+                    <div>
+                        <h1 id="greetingMessage">Good Evening,</h1>
+                        <p class="user-email-display"><span class="material-icons">account_circle</span> <span
+                                id="userEmailTarget">Loading...</span></p>
+                    </div>
+                </div>
+                <button onclick="window.location.href='404page.html'" class="btn btn-outline support-btn"><span
+                        class="material-icons">support_agent</span> Get Support</button>
+            </header>
+            <div id="overview-tab" class="dashboard-tab active-tab">
+                <div class="stats-grid">
+                    <div class="stat-card glass-panel">
+                        <div class="stat-icon"><span class="material-icons">shopping_bag</span></div>
+                        <div class="stat-info">
+                            <h3>Total Orders</h3>
+                            <h2>12</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <div class="stat-icon" style="color: var(--warning-neon); background: rgba(245, 158, 11, 0.1);">
+                            <span class="material-icons">stars</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Quantum Points</h3>
+                            <h2 class="text-gradient">2,450</h2>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-panel">
+                        <div class="stat-icon" style="color: var(--success-neon); background: rgba(16, 185, 129, 0.1);">
+                            <span class="material-icons">support</span>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Active Tickets</h3>
+                            <h2>0</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-sections">
+                    <div class="section-card glass-panel">
+                        <h3>Recent Activity</h3>
+                        <ul class="activity-list">
+                            <li><span class="material-icons">shopping_bag</span> Order #QN-88392 shipped</li>
+                            <li><span class="material-icons">stars</span> Earned 245 Quantum Points</li>
+                            <li><span class="material-icons">support</span> Ticket #TKT-456 opened</li>
+                        </ul>
+                    </div>
+                    <div class="quick-actions">
+                        <h3>Quick Actions</h3>
+                        <div class="action-buttons">
+                            <button onclick="window.location.href='404page.html'" class="btn btn-primary">Reorder
+                                Favorites</button>
+                            <button onclick="window.location.href='404page.html'" class="btn btn-outline">Track All
+                                Orders</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-tracker-card glass-panel">
+                    <div class="tracker-header">
+                        <h3>Active Delivery</h3>
+                        <span class="chips"
+                            style="border-color: var(--accent-primary); color: var(--accent-primary);">Order
+                            #QN-88392</span>
+                    </div>
+                    <div class="product-mini-preview"
+                        style="display: flex; gap: 1rem; align-items: center; margin-bottom: 2rem;">
+                        <div
+                            style="width: 60px; height: 60px; background: var(--bg-main); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;">
+                            <span class="material-icons text-muted">laptop_mac</span>
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; color: var(--text-main);">Razer Blade 16 - Creator Edition</h4>
+                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Estimated Delivery:
+                                Thursday, Oct 24</p>
+                        </div>
+                    </div>
+                    <div class="progress-nodes">
+                        <div class="node completed">
+                            <div class="node-icon"><span class="material-icons">receipt_long</span></div>
+                            <span>Processed</span>
+                        </div>
+                        <div class="node completed">
+                            <div class="node-icon"><span class="material-icons">inventory</span></div>
+                            <span>Packed</span>
+                        </div>
+                        <div class="node active">
+                            <div class="node-icon"><span class="material-icons">local_shipping</span></div>
+                            <span>In Transit</span>
+                        </div>
+                        <div class="node">
+                            <div class="node-icon"><span class="material-icons">home</span></div>
+                            <span>Delivered</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-panel"
+                    style="margin-top: 2rem; padding: 1.5rem; display: flex; align-items: center; justify-content: space-between; border-left: 4px solid var(--warning-neon); flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <span class="material-icons"
+                            style="color: var(--warning-neon); font-size: 2rem;">security_update_warning</span>
+                        <div>
+                            <h4 style="margin: 0 0 0.3rem 0; color: var(--text-main);">Protect Your Account</h4>
+                            <p style="margin: 0; color: var(--text-muted); font-size: 0.9rem;">Enable Two-Factor
+                                Authentication (2FA) to secure your saved payment methods.</p>
+                        </div>
+                    </div>
+                    <button onclick="window.location.href='404page.html'" class="btn btn-outline"
+                        style="border-color: var(--warning-neon); color: var(--warning-neon);">Enable 2FA</button>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <h3 style="color: var(--text-main); margin-bottom: 1.5rem;">Recently Viewed</h3>
+                    <div style="display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 1rem;"
+                        class="hide-scrollbar">
+
+                        <div class="glass-panel"
+                            style="min-width: 200px; padding: 1rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <img src="./assets/airpods-apple.webp" alt="Audio"
+                                style="height: 100px; object-fit: contain; margin-bottom: 1rem;">
+                            <h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--text-main);">Pro Studio
+                                Cans</h4>
+                            <p class="font-mono text-gradient" style="margin: 0; font-size: 0.9rem;">$349.00</p>
+                        </div>
+
+                        <div class="glass-panel"
+                            style="min-width: 200px; padding: 1rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <img src="./assets/wireless-mouse.webp" alt="Mouse"
+                                style="height: 100px; object-fit: contain; margin-bottom: 1rem;">
+                            <h4 style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--text-main);">Ergo Wireless
+                            </h4>
+                            <p class="font-mono text-gradient" style="margin: 0; font-size: 0.9rem;">$89.99</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="orders-tab" class="dashboard-tab">
+                <div class="tab-header">
+                    <h2>Order History</h2>
+                </div>
+                <div class="settings-grid" style="margin-bottom: 2rem;">
+                    <div class="glass-panel"
+                        style="padding: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <p
+                                style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; margin: 0 0 0.5rem 0;">
+                                Total Spent (2026)</p>
+                            <h2 style="margin: 0; color: var(--text-main); font-size: 2rem;">$4,528<span
+                                    style="font-size: 1rem; color: var(--text-muted);">.99</span></h2>
+                        </div>
+                        <div class="stat-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--success-neon);">
+                            <span class="material-icons">trending_up</span>
+                        </div>
+                    </div>
+                    <div class="glass-panel"
+                        style="padding: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <p
+                                style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; margin: 0 0 0.5rem 0;">
+                                Most Bought Category</p>
+                            <h2 style="margin: 0; color: var(--text-main); font-size: 1.5rem;">Peripherals</h2>
+                        </div>
+                        <div class="stat-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;"><span
+                                class="material-icons">keyboard</span></div>
+                    </div>
+                </div>
+                <div class="table-container glass-panel">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-mono text-gradient">#QN-88392</td>
+                                <td>Oct 21, 2026</td>
+                                <td><span class="status-badge transit">In Transit</span></td>
+                                <td class="font-mono">$3,499.00</td>
+                                <td>
+                                    <button onclick="window.location.href='404page.html'"
+                                        class="btn-icon glass-icon"><span
+                                            class="material-icons">visibility</span></button>
+                                    <button onclick="window.location.href='404page.html'" class="btn-icon"
+                                        style="color: var(--success-neon);"><span
+                                            class="material-icons">redo</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-mono text-gradient">#QN-75411</td>
+                                <td>Sep 04, 2026</td>
+                                <td><span class="status-badge delivered">Delivered</span></td>
+                                <td class="font-mono">$129.99</td>
+                                <td><button onclick="window.location.href='404page.html'"
+                                        class="btn-icon glass-icon"><span
+                                            class="material-icons">visibility</span></button></td>
+                            </tr>
+                            <tr>
+                                <td class="font-mono text-gradient">#QN-62004</td>
+                                <td>Jul 18, 2026</td>
+                                <td><span class="status-badge cancelled">Cancelled</span></td>
+                                <td class="font-mono">$899.00</td>
+                                <td><button onclick="window.location.href='404page.html'"
+                                        class="btn-icon glass-icon"><span
+                                            class="material-icons">visibility</span></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; padding: 1rem; background: rgba(0,0,0,0.2); border-radius: var(--radius-md); border: 1px dashed var(--glass-border);">
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">Need these records for taxes or
+                        accounting?</span>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button onclick="window.location.href='404page.html'" class="btn btn-outline"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;"><span class="material-icons"
+                                style="font-size: 1.2rem; margin-right: 5px;">picture_as_pdf</span> PDF
+                            Invoices</button>
+                        <button onclick="window.location.href='404page.html'" class="btn btn-outline"
+                            style="padding: 0.5rem 1rem; font-size: 0.85rem;"><span class="material-icons"
+                                style="font-size: 1.2rem; margin-right: 5px;">table_view</span>
+                            Export CSV</button>
+                    </div>
+                </div>
+            </div>
+            <div id="saved-tab" class="dashboard-tab">
+                <div class="tab-header">
+                    <h2>Saved Ecosystems</h2>
+                    <div class="saved-controls">
+                        <button onclick="window.location.href='404page.html'" class="btn btn-cart"><span
+                                class="material-icons">shopping_cart_checkout</span> Add All
+                            to Cart</button>
+                    </div>
+                </div>
+                <div class="saved-grid">
+                    <div class="saved-card glass-panel">
+                        <img src="./assets/lap1.webp" alt="Monitor" class="saved-img">
+                        <div class="saved-info">
+                            <h4>Pro 4K Display</h4>
+                            <p class="font-mono text-gradient">$499.00</p>
+                            <span class="status-badge delivered" style="margin-top: 0.5rem; display: inline-block;">In
+                                Stock</span>
+                        </div>
+                        <div class="saved-actions">
+                            <button onclick="window.location.href='404page.html'" class="btn btn-outline"
+                                style="width: 100%; margin-bottom: 0.5rem;">Move to
+                                Cart</button>
+                            <button onclick="window.location.href='404page.html'" class="btn-icon"
+                                style="color: var(--text-muted);"><span
+                                    class="material-icons">delete_outline</span></button>
+                        </div>
+                    </div>
+                    <div class="saved-card glass-panel">
+                        <img src="./assets/keyboard.webp" alt="Keyboard" class="saved-img">
+                        <div class="saved-info">
+                            <h4>Mech Keyboard V2</h4>
+                            <p class="font-mono text-gradient">$129.00</p>
+                            <span class="status-badge transit" style="margin-top: 0.5rem; display: inline-block;">Low
+                                Stock</span>
+                        </div>
+                        <div class="saved-actions">
+                            <button onclick="window.location.href='404page.html'" class="btn btn-outline"
+                                style="width: 100%; margin-bottom: 0.5rem;">Move to
+                                Cart</button>
+                            <button onclick="window.location.href='404page.html'" class="btn-icon"
+                                style="color: var(--text-muted);"><span
+                                    class="material-icons">delete_outline</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-panel"
+                    style="margin-bottom: 2rem; padding: 1rem 1.5rem; background: linear-gradient(90deg, rgba(244, 63, 94, 0.1) 0%, transparent 100%); border-left: 4px solid var(--accent-primary); display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <span class="material-icons"
+                            style="color: var(--accent-primary); animation: pulseBorder 2s infinite; border-radius: 50%;">local_fire_department</span>
+                        <div>
+                            <span style="color: var(--text-main); font-weight: 500;">Great timing!</span>
+                            <span style="color: var(--text-muted);"> 1 item in your ecosystem just dropped in
+                                price.</span>
+                        </div>
+                    </div>
+                    <button onclick="window.location.href='404page.html'" class="btn btn-cart"
+                        style="padding: 0.4rem 1rem; font-size: 0.85rem;">View Deal</button>
+                </div>
+
+                <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--glass-border);">
+                    <h3 style="color: var(--text-main); margin-bottom: 0.5rem;">Complete Your Setup</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.9rem;">Accessories that pair
+                        perfectly with the items you've saved.</p>
+
+                    <div class="settings-grid">
+                        <div class="glass-panel"
+                            style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
+                            <img src="./assets/hdmi-cable.webp" alt="Cable"
+                                style="width: 60px; height: 60px; object-fit: contain; background: var(--bg-main); border-radius: var(--radius-sm); padding: 0.5rem;">
+                            <div style="flex-grow: 1;">
+                                <h4 style="margin: 0 0 0.2rem 0; color: var(--text-main);">Braided HDMI 2.1 Cable</h4>
+                                <p style="margin: 0 0 0.5rem 0; color: var(--text-muted); font-size: 0.85rem;">Essential
+                                    for your 4K Monitor</p>
+                                <span class="font-mono text-gradient" style="font-size: 0.9rem;">$19.99</span>
+                            </div>
+                            <button onclick="window.location.href='404page.html'" class="btn-icon glass-icon"><span
+                                    class="material-icons">add_shopping_cart</span></button>
+                        </div>
+
+                        <div class="glass-panel"
+                            style="padding: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
+                            <img src="./assets/mouse-pad.webp" alt="Mousepad"
+                                style="width: 60px; height: 60px; object-fit: contain; background: var(--bg-main); border-radius: var(--radius-sm); padding: 0.5rem;">
+                            <div style="flex-grow: 1;">
+                                <h4 style="margin: 0 0 0.2rem 0; color: var(--text-main);">RGB Extended Desk Mat</h4>
+                                <p style="margin: 0 0 0.5rem 0; color: var(--text-muted); font-size: 0.85rem;">Pairs
+                                    with your Mech Keyboard</p>
+                                <span class="font-mono text-gradient" style="font-size: 0.9rem;">$39.00</span>
+                            </div>
+                            <button onclick="window.location.href='404page.html'" class="btn-icon glass-icon"><span
+                                    class="material-icons">add_shopping_cart</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="settings-tab" class="dashboard-tab">
+                <div class="tab-header">
+                    <h2>Account Settings</h2>
+                    <button onclick="window.location.href='404page.html'" class="btn btn-primary">Save All
+                        Changes</button>
+                </div>
+                <div class="settings-grid">
+                    <div class="settings-card glass-panel">
+                        <h3>Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" value="Alex">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" value="Chen">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="dash-mail" readonly
+                                style="opacity: 0.5; cursor: not-allowed;">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+                    <div class="settings-card glass-panel">
+                        <h3>Security</h3>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="Current Password">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <input type="password">
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="settings-card glass-panel">
+                        <h3>Preferences</h3>
+                        <div class="preference-item">
+                            <div>
+                                <h4>Order Updates</h4>
+                                <p>Receive SMS notifications for deliveries.</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="preference-item">
+                            <div>
+                                <h4>Exclusive Tech Drops</h4>
+                                <p>Weekly emails about new setups.</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="settings-card glass-panel">
+                        <h3>Privacy Settings</h3>
+                        <div class="preference-item">
+                            <div>
+                                <h4>Data Sharing</h4>
+                                <p>Share anonymized usage data for improvements.</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                        <div class="download-data">
+                            <button onclick="window.location.href='404page.html'" class="btn btn-outline">Download My
+                                Data</button>
+                            <p class="text-small">Export all your account data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="mobile-backdrop" id="mobileBackdrop"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userEmail = sessionStorage.getItem('userMail') || 'user@quantumtech.com';
+            document.getElementById('userEmailTarget').textContent = userEmail;
+            document.getElementById('dash-mail').value = userEmail;
+            const greetingTarget = document.getElementById('greetingMessage');
+            const hour = new Date().getHours();
+            let greeting = 'Good Evening,';
+            if (hour >= 5 && hour < 12) {
+                greeting = 'Good Morning,';
+            } else if (hour >= 12 && hour < 17) {
+                greeting = 'Good Afternoon,';
+            }
+            greetingTarget.textContent = greeting;
+            const navItems = document.querySelectorAll('.sidebar-nav .nav-item');
+            const tabs = document.querySelectorAll('.dashboard-tab');
+            navItems.forEach((item, index) => {
+                item.addEventListener('click', (e) => {
+                    if (item.getAttribute('href') === '#') {
+                        e.preventDefault();
+                    }
+                    const targetTabIds = ['overview-tab', 'orders-tab', 'saved-tab', 'settings-tab', 'settings-tab'];
+                    const targetId = targetTabIds[index];
+                    if (targetId) {
+                        navItems.forEach(nav => nav.classList.remove('active'));
+                        item.classList.add('active');
+                        tabs.forEach(tab => tab.classList.remove('active-tab'));
+                        document.getElementById(targetId).classList.add('active-tab');
+                    }
+                });
+            });
+            const mobileToggle = document.getElementById('mobileMenuToggle');
+            const backdrop = document.getElementById('mobileBackdrop');
+            const layout = document.querySelector('.dashboard-layout');
+            mobileToggle.addEventListener('click', () => {
+                layout.classList.toggle('sidebar-open');
+            });
+            backdrop.addEventListener('click', () => {
+                layout.classList.remove('sidebar-open');
+            });
+            const logoutBtn = document.getElementById('logoutBtn');
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                sessionStorage.removeItem('userEmail');
+                window.location.href = 'login.html';
+            });
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 900) {
+                    layout.classList.remove('sidebar-open');
+                }
+            });
+            document.addEventListener('touchstart', (e) => {
+                if (window.innerWidth <= 900) {
+                    if (
+                        layout.classList.contains('sidebar-open') &&
+                        !sidebar.contains(e.target) &&
+                        !mobileToggle.contains(e.target)
+                    ) {
+                        layout.classList.remove('sidebar-open');
+                    }
+                }
+            });
+            document.querySelectorAll('.dashboard-sidebar .nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    if (window.innerWidth <= 900) {
+                        layout.classList.remove('sidebar-open');
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

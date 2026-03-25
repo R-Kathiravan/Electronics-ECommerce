@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404Page || Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shared.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <style>
+        /* --- 404 Error Page Layout --- */
+        .error-section {
+            position: relative;
+            min-height: calc(100vh - 80px);
+            /* Adjust based on your header height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            overflow: hidden;
+            background: var(--bg-main);
+        }
+
+        .error-container {
+            display: flex;
+            align-items: center;
+            max-width: 900px;
+            width: 100%;
+            padding: 4rem;
+            gap: 4rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* --- Left Side: Massive 404 --- */
+        .error-visual {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .error-code {
+            font-size: 12rem;
+            line-height: 1;
+            margin: 0;
+            font-family: var(--font-mono);
+            font-weight: 900;
+            letter-spacing: -5px;
+            /* Subtle floating animation */
+            animation: floatCode 6s ease-in-out infinite;
+            text-shadow: 0 10px 30px rgba(244, 63, 94, 0.3);
+        }
+
+        @keyframes floatCode {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* The vertical line separating the 404 and the text */
+        .error-divider {
+            height: 150px;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--glass-border), transparent);
+            margin-left: 3rem;
+        }
+
+        /* --- Right Side: Content & Actions --- */
+        .error-content {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .error-title {
+            font-size: 3rem;
+            color: var(--text-main);
+            margin: 0 0 1rem 0;
+            line-height: 1.1;
+        }
+
+        .error-subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0 0 2.5rem 0;
+        }
+
+        .error-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 900px) {
+            .error-container {
+                flex-direction: column;
+                padding: 3rem 2rem;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .error-visual {
+                justify-content: center;
+            }
+
+            .error-divider {
+                display: none;
+                /* Hide the vertical line on mobile */
+            }
+
+            .error-code {
+                font-size: 8rem;
+            }
+
+            .error-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <section class="error-section">
+
+        <div class="ambient-orb orb-top-left" style="background: var(--accent-primary);"></div>
+        <div class="ambient-orb orb-bottom-right" style="background: #8b5cf6;"></div>
+
+        <div class="error-container glass-panel">
+            <div class="error-visual">
+                <h1 class="error-code text-gradient">404</h1>
+                <div class="error-divider"></div>
+            </div>
+
+            <div class="error-content">
+                <div class="chips"
+                    style="border-color: #ef4444; color: #ef4444; margin-bottom: 1rem; display: inline-block;">Error
+                    Detected</div>
+                <h2 class="error-title">System <span class="text-gradient">Offline</span></h2>
+                <p class="error-subtitle">The coordinates you entered lead to a dead zone. The page you are looking for
+                    has been moved, renamed, or no longer exists in our ecosystem.</p>
+
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-cart" style="flex: 1; justify-content: center;">
+                        <span class="material-icons" style="font-size: 1.2rem; margin-right: 0.5rem;">home</span> Return
+                        to Home
+                    </a>
+                    <button onclick="history.back()" class="btn btn-outline" style="flex: 1; justify-content: center;">
+                        <span class="material-icons" style="font-size: 1.2rem; margin-right: 0.5rem;">undo</span>
+                        Return to Previous Page
+                    </button>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

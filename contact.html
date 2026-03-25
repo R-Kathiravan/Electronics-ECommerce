@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections || Ecommerce</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="shared.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <main class="main-container">
+        <header id="header">
+            <div class="header-cls reveal-section">
+                <a href="index.html" class="head-logo">
+                    <img src="./assets/Stackly-Logo-White.webp" alt="Logo" class="logo reveal-image1">
+                </a>
+                <nav class="nav-items" id="navMenu">
+                    <a href="index.html" class=" btn-sweep">Home</a>
+                    <a href="shop.html" class="btn-sweep">Shop</a>
+                    <a href="collections.html" class="btn-sweep">Collections</a>
+                    <a href="contact.html" class="nav-active btn-sweep">Contact</a>
+                    <div class="close-btn material-icons" id="closeMenu">close</div>
+                    <div class="mob-view">
+                        <a href="login.html" class="btn-cart">Login <span class="material-icons">login</span></a>
+                    </div>
+                </nav>
+                <div class="header-actions">
+                    <a href="login.html" class="btn-cart">Login <span class="material-icons">login</span></a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span class="material-icons">menu</span>
+                </div>
+            </div>
+        </header>
+        <section class="collection-hero reveal-section">
+            <div class="collection-hero-bg">
+                <img src="./assets/space.webp" alt="Creator Studio Setup" class="hero-bg-img reveal-image1">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container collection-hero-content">
+                <nav aria-label="Breadcrumb" class="breadcrumbs" data-aos="fade-right">
+                    <ol>
+                        <li><a href="index.html"><span class="material-icons">home</span> Home</a></li>
+                        <li><span class="material-icons">chevron_right</span> Contact</li>
+                    </ol>
+                </nav>
+                <h1 class="collection-title" data-aos="fade-left">We're Here to Help</h1>
+                <p class="collection-desc" data-aos="fade-up">
+                    Got questions about your order or products? Reach out—we're happy to assist you anytime.
+                </p>
+            </div>
+        </section>
+        <section class="contact-section container">
+            <div class="contact-grid">
+
+                <div class="contact-info">
+                    <h1 class="shop-title">Get in <span class="text-gradient">Touch</span></h1>
+                    <p class="contact-subtitle">Our tech experts are ready to assist you. Reach out for support, sales
+                        inquiries, or partnership opportunities. We typically respond within 24 hours.</p>
+
+                    <div class="info-cards-container">
+
+                        <div class="info-card glass-panel" data-aos="fade-up" data-aos-delay="200">
+                            <div class="info-icon"><span class="material-icons">location_on</span></div>
+                            <div class="info-details">
+                                <h4>Headquarters</h4>
+                                <p>Stackly Phase1, Chinna Thirupathi<br>Salme, TN </p>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass-panel" data-aos="fade-up" data-aos-delay="300">
+                            <div class="info-icon"><span class="material-icons">email</span></div>
+                            <div class="info-details">
+                                <h4>Email Us</h4>
+                                <p>support@thestackly.com<br>info@thestackly.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass-panel" data-aos="fade-up">
+                            <div class="info-icon"><span class="material-icons">phone</span></div>
+                            <div class="info-details">
+                                <h4>Call Us</h4>
+                                <p class="font-mono">+91 9876543210</p>
+                                <span class="business-hours">Mon-Fri, 9am - 6pm IST</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper glass-panel" data-aos="fade-down">
+                    <form class="contact-form" onsubmit="event.preventDefault();">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fName">First Name</label>
+                                <input type="text" id="fName" placeholder="Alex" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lName">Last Name</label>
+                                <input type="text" id="lName" placeholder="Chen" required>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="alex@example.com" required>
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">How can we help?</label>
+                            <div class="sort-dropdown"> <select id="subject" class="custom-select"
+                                    style="width: 100%; padding-left: 1.5rem;" required>
+                                    <option value="" disabled selected>Select a topic...</option>
+                                    <option value="order">Where is my order?</option>
+                                    <option value="tech">Technical Support</option>
+                                    <option value="return">Returns & Refunds</option>
+                                    <option value="business">Business / Wholesale</option>
+                                </select>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Include your order number if applicable..."
+                                required></textarea>
+                            <div class="error-message"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-cart"
+                            style="width: 100%; justify-content: center; margin-top: 1rem;">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+        <section class="help-desk-section container">
+            <div class="section-header"
+                style="text-align: center; justify-content: center; border: none; margin-bottom: 3rem; flex-direction: column; margin: auto; align-items: center; margin: 40px 0 ;">
+                <h2 class="section-title">Self-Service <span class="text-gradient">Hub</span></h2>
+                <p style="color: var(--text-muted); margin-top: 0.5rem;">Quick links to solve your issues instantly.</p>
+            </div>
+
+            <div class="help-desk-grid">
+                <a href="404page.html" class="help-card glass-panel" data-aos="fade-down" data-aos-delay="200">
+                    <span class="material-icons text-gradient">local_shipping</span>
+                    <h3>Track Order</h3>
+                    <p>Check the live status of your shipment.</p>
+                </a>
+                <a href="404page.html" class="help-card glass-panel" data-aos="fade-down" data-aos-delay="300">
+                    <span class="material-icons text-gradient">assignment_return</span>
+                    <h3>Returns</h3>
+                    <p>Start a 30-day hassle-free return.</p>
+                </a>
+                <a href="404page.html" class="help-card glass-panel" data-aos="fade-down" data-aos-delay="400">
+                    <span class="material-icons text-gradient">verified_user</span>
+                    <h3>Warranty</h3>
+                    <p>Register your product or file a claim.</p>
+                </a>
+                <a href="404page.html" class="help-card glass-panel" data-aos="fade-down" data-aos-delay="500">
+                    <span class="material-icons text-gradient">forum</span>
+                    <h3>Live Chat</h3>
+                    <p>Talk to a human right now.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="location-section container reveal-section">
+            <div class="location-card glass-panel">
+                <div class="location-info" data-aos="fade-up">
+                    <h2>Global <span class="text-gradient">Presence</span></h2>
+                    <p>While we ship worldwide, our main operations and support teams are based in our state-of-the-art
+                        tech hub.</p>
+                    <ul class="footer-links" style="margin-top: 2rem;">
+                        <li><span class="material-icons" style="color: var(--accent-primary);">business</span> Stackly
+                             HQ,</li>
+                        <li><span class="material-icons" style="color: var(--accent-primary);">map</span> 
+                            Chinna Thirupathi,</li>
+                        <li><span class="material-icons" style="color: var(--accent-primary);">location_city</span>
+                            Salem, Tamil Nadu </li>
+                    </ul>
+                </div>
+
+                <div class="location-visual" data-aos="fade-left">
+                    <div class="tech-hub-container">
+
+                        <div class="radar-bg">
+                            <div class="radar-ring ring-1"></div>
+                            <div class="radar-ring ring-2"></div>
+                            <div class="radar-ring ring-3"></div>
+                        </div>
+
+                        <div class="hub-center">
+                            <div class="hub-icon pulse-glow">
+                                <span class="material-icons"
+                                    style="color: var(--accent-primary); font-size: 2.5rem;">memory</span>
+                            </div>
+                            <div class="hub-label">HQ - India</div>
+                        </div>
+
+                        <div class="floating-node node-1 glass-panel">
+                            <span class="material-icons"
+                                style="color: var(--success-neon); font-size: 1.8rem;">flight_takeoff</span>
+                            <div class="node-text">
+                                <h4 style="margin: 0; color: var(--text-main); font-size: 1.1rem;">120+</h4>
+                                <p
+                                    style="margin: 0; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">
+                                    Countries Shipped</p>
+                            </div>
+                        </div>
+
+                        <div class="floating-node node-2 glass-panel">
+                            <span class="material-icons"
+                                style="color: var(--warning-neon); font-size: 1.8rem;">support_agent</span>
+                            <div class="node-text">
+                                <h4 style="margin: 0; color: var(--text-main); font-size: 1.1rem;">24/7</h4>
+                                <p
+                                    style="margin: 0; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">
+                                    Global Support</p>
+                            </div>
+                        </div>
+
+                        <div class="floating-node node-3 glass-panel">
+                            <span class="material-icons" style="color: #3b82f6; font-size: 1.8rem;">inventory_2</span>
+                            <div class="node-text">
+                                <h4 style="margin: 0; color: var(--text-main); font-size: 1.1rem;">15</h4>
+                                <p
+                                    style="margin: 0; color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">
+                                    Fulfillment Centers</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section container">
+            <div class="faq-wrapper">
+                <div class="faq-header">
+                    <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+                    <p>Find quick answers to our most common tech and shipping inquiries.</p>
+                </div>
+
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What is your return policy on electronics?
+                            <span class="material-icons icon">add</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>We offer a 30-day return policy on all unopened items. If the device has been opened but
+                                is defective, we will issue a full replacement or store credit. Please ensure all
+                                original cables and packaging are included.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Do you offer international shipping?
+                            <span class="material-icons icon">add</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Yes! We ship globally. International orders typically take 7-14 business days to arrive
+                                depending on customs processing in your country. Shipping fees are calculated at
+                                checkout.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            How does the Trade-In program work?
+                            <span class="material-icons icon">add</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Simply fill out our online trade-in form with your device's specs and condition. We will
+                                give you an instant quote. Ship it to us for free, and once verified, we will issue your
+                                store credit within 24 hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Are these products covered by a manufacturer warranty?
+                            <span class="material-icons icon">add</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Absolutely. We are an authorized retailer for Apple, Razer, Sony, and Samsung. All
+                                products come with their standard 1-year manufacturer warranty, with options to purchase
+                                extended protection plans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section container">
+            <div class="newsletter-card glass-panel">
+                <div class="newsletter-content" data-aos="fade-down" data-aos-delay="200">
+                    <h2>Join the <span class="text-gradient">Tech Club</span></h2>
+                    <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                </div>
+
+                <form class="newsletter-form" onsubmit="event.preventDefault(); window.location.href='404page.html'"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="input-group">
+                        <span class="material-icons">mail_outline</span>
+                        <input type="email" placeholder="Enter your email address..." required>
+                        <button type="submit" class="btn btn-cart">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+
+                    <div class="footer-col brand-col reveal-section" data-aos="fade-up" data-aos-delay="200">
+                        <img src="./assets/Stackly-Logo-White.webp" alt="logo" class="logo reveal-image1">
+                        <p class="footer-desc">Premium electronics, unbeatable prices, and next-gen tech delivered right
+                            to your door.</p>
+                        <div class="social-links">
+                            <a href="404page.html" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="404page.html" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="404page.html" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="collections.html">Collections</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Categories</h3>
+                        <ul class="footer-links">
+                            <li><a href="404page.html">Laptops & PC</a></li>
+                            <li><a href="404page.html">Smartphones</a></li>
+                            <li><a href="404page.html">Audio & Sound</a></li>
+                            <li><a href="404page.html">Gaming Gear</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col contact-col" data-aos="fade-up" data-aos-delay="500">
+                        <h3>Contact Us</h3>
+                        <ul class="footer-links">
+                            <li><span class="material-icons">location_on</span> Stackly Phase1, Salem, Tamil Nadu</li>
+                            <li><span class="material-icons">phone</span> +91 9876543210</li>
+                            <li><span class="material-icons">email</span> support@thestackly.com</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom" data-aos="fade-down">
+                    <p>&copy; 2026 Stackly. All rights reserved.</p>
+                    <div class="payment-methods">
+                        <div class="chips" style="padding: 4px 10px; font-size: 0.7rem; border: none;">Visa</div>
+                        <div class="chips" style="padding: 4px 10px; font-size: 0.7rem; border: none;">Mastercard</div>
+                        <div class="chips" style="padding: 4px 10px; font-size: 0.7rem; border: none;">PayPal</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+
+                header.addEventListener('click', () => {
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                        }
+                    });
+
+                    item.classList.toggle('active');
+                    const content = item.querySelector('.accordion-content');
+
+                    if (item.classList.contains('active')) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    } else {
+                        content.style.maxHeight = null;
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-cubic',
+                delay: 50,
+                offset: 100,
+                once: true,
+                mirror: false,
+                disable: 'mobile'
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('.contact-form');
+            const fName = document.getElementById('fName');
+            const lName = document.getElementById('lName');
+            const email = document.getElementById('email');
+            const subject = document.getElementById('subject');
+            const message = document.getElementById('message');
+            const submitBtn = form.querySelector('button[type="submit"]');
+
+            function showError(input, messageText) {
+                const formGroup = input.parentElement;
+
+                input.classList.add('error');
+
+                let errorElement = formGroup.querySelector('.error-message');
+                if (!errorElement) {
+                    errorElement = document.createElement('div');
+                    errorElement.className = 'error-message';
+                    formGroup.appendChild(errorElement);
+                }
+                errorElement.innerHTML = `<span class="material-icons">error_outline</span> ${messageText}`;
+            }
+
+            function clearError(input) {
+                const formGroup = input.parentElement;
+                input.classList.remove('error');
+                const errorElement = formGroup.querySelector('.error-message');
+                if (errorElement) {
+                    formGroup.removeChild(errorElement);
+                }
+            }
+
+            function isValidEmail(emailStr) {
+                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(emailStr).toLowerCase());
+            }
+            function validateForm() {
+                let isValid = true;
+
+                if (fName.value.trim() === '') {
+                    showError(fName, 'First name is required');
+                    isValid = false;
+                } else {
+                    clearError(fName);
+                }
+
+                if (lName.value.trim() === '') {
+                    showError(lName, 'Last name is required');
+                    isValid = false;
+                } else {
+                    clearError(lName);
+                }
+
+                if (email.value.trim() === '') {
+                    showError(email, 'Email is required');
+                    isValid = false;
+                } else if (!isValidEmail(email.value.trim())) {
+                    showError(email, 'Please enter a valid email address');
+                    isValid = false;
+                } else {
+                    clearError(email);
+                }
+
+                if (subject.value === '') {
+                    showError(subject, 'Please select a topic');
+                    isValid = false;
+                } else {
+                    clearError(subject);
+                }
+
+                if (message.value.trim() === '') {
+                    showError(message, 'Message cannot be empty');
+                    isValid = false;
+                } else {
+                    clearError(message);
+                }
+
+                return isValid;
+            }
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                if (validateForm()) {
+                    const originalBtnText = submitBtn.innerHTML;
+                    submitBtn.innerHTML = '<span class="material-icons" style="animation: spin 1s linear infinite;">autorenew</span> Sending...';
+                    submitBtn.style.opacity = '0.8';
+
+                    setTimeout(() => {
+                        window.location.href = '404page.html'
+                        form.reset();
+                        setTimeout(() => {
+                            submitBtn.classList.remove('success-state');
+                            submitBtn.innerHTML = originalBtnText;
+                        }, 4000);
+
+                    }, 2000);
+                }
+            });
+
+            const inputs = [fName, lName, email, subject, message];
+            inputs.forEach(input => {
+                input.addEventListener('input', () => {
+                    if (input.classList.contains('error')) {
+                        clearError(input);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</body>
+
+</html>
